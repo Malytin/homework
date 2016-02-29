@@ -1,0 +1,61 @@
+html{
+	background: gray;
+}
+
+.background{
+	margin: 0 auto;
+    width: 800px;
+    background-color: white;
+}
+
+table{
+	border-collapse: collapse;
+    border-spacing: 5px;
+	width: 100%;
+	color: transparent;
+	border: 11px solid gray;
+}
+
+td{
+	width: 100px;
+	height: 100px;
+	border: 10px solid black;
+}
+
+.line2,
+.line4{
+	height: 200px;
+}
+
+.box9{
+	background-color:#ff513d;
+}
+
+.box6,
+.box13,
+.box43{
+	background-color:#fffd70;
+}
+
+.box37,
+.box53{
+	background-color:#140d0f;
+}
+
+.box48{
+	background-color:#0f447d;
+}
+
+.box60,
+.box53{
+	height:50px;
+}
+.box39,
+.box46{
+	width:200px;
+}
+
+col{
+	width:80px;
+}
+

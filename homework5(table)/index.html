@@ -1,0 +1,47 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Композиция с красным, синим и желтым</title>
+	<link rel = "stylesheet" href="css/reset.css">
+	<link rel = "stylesheet" href="css/style.css">
+</head>
+<body>
+	<div class="background">
+		<table>
+			<tr>
+				<td class="box1" colspan="2">1</td>
+				<td class="box3" colspan="2">3</td>
+				<td class="box6" colspan="2">6</td>
+			</tr>
+			<tr class="line2">
+				<td class="box8">8</td>
+				<td class="box9" colspan="3" rowspan="2">9</td>
+				<td class="box13" colspan="2">13</td>
+			</tr>
+			<tr class="line4">
+				<td rowspan ="2">22</td>
+				<td>27</td>
+				<td>28</td>
+			</tr>
+			<tr>
+				<td class="box37" colspan="2" rowspan="2">37</td>
+				<td class="box39">39</td>
+				<td colspan="2">41</td>
+			</tr>
+			<tr>
+				<td class="box43" rowspan="3">43</td>
+				<td class="box46">46</td>
+				<td class="box48" colspan="2" rowspan="2">48</td>
+			</tr>
+			<tr>
+				<td colspan="2" rowspan="2">51</td>
+				<td class="box53">53</td>
+			</tr>
+			<tr>
+				<td class="box60" colspan="3">60</td>
+			</tr>
+		</table>
+	</div>
+</body>
+</html>
