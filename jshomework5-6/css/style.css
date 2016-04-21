@@ -1,0 +1,26 @@
+﻿form {
+    font-size: 50px;
+    position: relative;
+    top: 174px;
+    left: 529px;
+}
+.startButton  {
+    font-size: 50px;
+    position: absolute;
+    top: 255px;
+    left: 691px;
+}
+.resetButton  {
+    font-size: 50px;
+    position: absolute;
+    top: 255px;
+    left: 518px;
+}
+.stopButton  {
+    display: none;
+    font-size: 50px;
+    position: absolute;
+    top: 255px;
+    left: 691px;
+}
+
