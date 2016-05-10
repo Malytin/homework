@@ -1,0 +1,65 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial,Tahoma;
+}
+body {
+    width: 500px;
+    margin: auto;
+    margin-top: 20px;
+    border: 2px solid black;
+}
+form {
+    margin: 10px;
+    position: relative;
+}
+input[type="submit"] {
+    width: 100px;
+    height: 25px;
+    margin-left: 0;
+}
+#firstname, #lastname, #address, input[type="submit"]  {
+    margin: 10px;
+}
+#address {
+    margin-left: 24px;
+}
+#lastname {
+    margin-left: 12px;
+}
+.first {
+    display: none;
+    position: absolute;
+    top: 7px;
+    left: 270px;
+    padding: 5px;
+    font-size: 12px;
+    border: 1px solid gray;
+    border-radius: 3px;
+    box-shadow: 0px 0px 5px 0px rgba(85,85,85,0.75);
+    opacity: 0;
+}
+.second {
+    display: none;
+    position: absolute;
+    top: 46px;
+    left: 270px;
+    padding: 5px;
+    font-size: 12px;
+    border: 1px solid gray;
+    border-radius: 3px;
+    box-shadow: 0px 0px 5px 0px rgba(85,85,85,0.75);
+    opacity: 0;
+}
+.third {
+    display: none;
+    position: absolute;
+    top: 85px;
+    left: 270px;
+    padding: 5px;
+    font-size: 12px;
+    border: 1px solid gray;
+    border-radius: 3px;
+    box-shadow: 0px 0px 5px 0px rgba(85,85,85,0.75);
+    opacity: 0;
+}
