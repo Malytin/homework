@@ -1,0 +1,106 @@
+﻿
+body {
+    position: relative;
+    width: 800px;
+    height: 600px;
+    margin: 10px auto;
+    border: 10px solid rgba(45, 97, 103, 0.7);
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 5px rgba(23, 23, 47, 0.76);
+}
+a {
+    text-decoration: none;
+}
+.jcarousel {
+    position: relative;
+    overflow: hidden;
+}
+
+/*
+ Это контейнер для пунктов карусели.
+ Вы должны убедиться, что позиция является относительная или абсолютная и
+ что ширина достаточно велика, чтобы в неё влезли все элементы.
+*/
+.jcarousel ul {
+    width: 20000em;
+    position: relative;
+
+    /* Опционально, так как это <ul> элемент */
+
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+/*
+Это элементы пунктов.  jCarousel работает лучше, если элементы
+имеют фиксированную ширину и высоту (но это не обязательно).
+*/
+.jcarousel li {
+    /* Требуется только для блочных элементов, таких как <li>  */
+    float: left;
+}
+.jcarousel-prev {
+    position: absolute;
+    bottom: 300px;
+}
+.jcarousel-next {
+    position: absolute;
+    bottom: 300px;
+    right: 0px;
+}
+.jcarousel-pagination {
+    position: absolute;
+    bottom: 10px;
+    left: 310px;
+}
+.number {
+    font-size: 18px;
+    background: rgba(128,128,128,0.3);
+    padding: 4px 14px;
+    border: 1px solid #14036d;
+    border-radius: 10px;
+    margin-left: 5px;
+    color: white;
+}
+.active {
+    background: rgba(40, 118, 128, 0.35);
+    border: 1px solid black;
+}
+/*Style_check*/
+.check_blocks_style {
+    position: absolute;
+    right: 150px;
+}
+.check_blocks_style input[type=checkbox] {
+    position: absolute;
+    clip: rect(0, 0, 0, 0);
+}
+.check_blocks_style label {
+    cursor: pointer;
+    margin-left: 10px;
+}
+.check_blocks_style label:after {
+    content: " ";
+    display: inline-block;
+    width: 17px;
+    height: 17px;
+    background: url(../img/checkbox-2.png);
+    position: relative;
+    top: 3px;
+    margin-left: 5px;
+}
+.check_blocks_style input[type=checkbox]:checked + label:after {
+    background-position: 0 -17px;
+}
+.check_blocks_style label:hover:after {
+    background-position: 0 -34px;
+}
+.check_blocks_style input[type=checkbox]:checked + label:hover:after {
+    background-position: 0 -51px;
+}
+.check_blocks_style label[for=test-check5]:after {
+    background: url(../img/checkbox-2.png);
+    background-position: 0 -17px;
+    width: 17px;
+    height: 17px;
+}
