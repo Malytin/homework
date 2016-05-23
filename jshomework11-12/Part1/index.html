@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+    <html lang="EN">
+        <head>
+            <meta charset="UTF-8">
+            <title>Document</title>
+            <link rel="stylesheet" href="css/style.css">
+            <script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
+            <script src="js/template.js"></script>
+            <script src="js/script.js"></script>
+
+        </head>
+        <body>
+            <script type="text/template" id="page">
+                <div class="main">
+                    <div class="title">
+                        <% for(var i=0;i< data.length; i++) { %>
+                            <h1><%= data[i].title %></h1>
+                        <% }; %>
+                        <% for(var i=0;i< dataImage.length; i++) { %>
+                            <img class="image" src="img/<%=  dataImage[i].thumbnail %>" alt="Мое фото">
+                        <% }; %>
+                        <% for(var i=0;i< data.length; i++) { %>
+                            <p class="vipusknik"><%= data[i].vipusknik %></p>
+                        <% }; %>
+                    </div>
+                    <div class="frontend">
+                        <% for(var i=0;i< dataP.length; i++) { %>
+                            <p>
+                                <%= dataP[i].question %>
+                            </p>
+                        <% }; %>
+                        <% for(var i=0;i< dataLi.length; i++) { %>
+                            <ul>
+                                <li><%= dataLi[i].answer %></li>
+                            </ul>
+                        <% }; %>
+                    </div>
+                    <div class="phone">
+                        <% for(var i=0;i< dataPhone.length; i++) { %>
+                            <p class="number">
+                                <%= dataPhone[i].number %>
+                            </p>
+                        <% }; %>
+                        <% for(var i=0;i< dataNumber.length; i++) { %>
+                            <p class="number" id="number">
+                                <%= dataNumber[i].number2 %>
+                            </p>
+                        <% }; %>
+                    </div>
+                    <div  class="link">
+                        <% for(var i=0;i< dataProfile.length; i++) { %>
+                            <p class="paragraph">
+                                <%= dataProfile[i].profile %>
+                            </p>
+                        <% }; %>
+                        <% for(var i=0;i< dataLink.length; i++) { %>
+                            <a href="<%= dataLink[i].link %>" target="_blank">Моя сторінка</a>
+                        <% }; %>
+                    </div>
+                    <div class="back">
+                        <div class="feedback">Мій фідбейк</div>
+                        <div class="eat"> Можу приготувати вам їсти!!</div>
+                     </div>
+                </div>
+            </script>
+        </body>
+</html>
+
