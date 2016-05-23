@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Homework13-14</title>
+        <!--<script src="js/QBase.js"></script>-->
+        <script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.2.0/lodash.js"></script>
+        <script src="js/script.js"></script>
+        <script src="js/QBase.js"></script>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <script type="text/template" id="test">
+            <form action="#" class="questionForm">
+                <h1 class="header">Тест по-програмирыванию</h1>
+                <ol class="questionBlock">
+                    <% for(var i=0;i< QBase.question.length; i++) { %>
+                        <li class="question">
+                            <h2 class="questionText"><%-QBase.question[i].q %></h2>
+                            <% for(var j=0;j< QBase.question[i].answer.length; j++) { %>
+                                <ol class="answerBlock">
+                                    <li class="answer">
+                                        <label class="answerLabel" for="<%-'chBox_'+i+'_'+j%>"><%-QBase.question[i].answer[j].text %></label>
+                                        <input type="checkbox" class="<%-'answer_checkbox'+i%>" id="<%-'chBox_'+i+'_'+j%>">
+                                    </li>
+                                </ol>
+                            <% } %>
+                        </li>
+                    <% }; %>
+                </ol>
+                <input type="submit" value="Проверить мои результаты" class="answerButton">
+            </form>
+        </script>
+    </body>
+</html>

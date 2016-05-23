@@ -1,0 +1,36 @@
+﻿body {
+    background: gray;
+    font-family: Arial,Tahoma;
+}
+.questionForm {
+    width: 750px;
+    margin: auto;
+    margin-top: 20px;
+    border: 2px solid black;
+    background: white;
+}
+h1 {
+    font-size: 18px;
+    text-align: center;
+    margin: 30px;
+}
+h2 {
+    font-size: 16px;
+}
+.questionBlock {
+    margin-left: 95px;
+}
+.answerBlock {
+    list-style-type: none;
+    margin-left: -40px;
+}
+.answerButton {
+    margin-top: 50px;
+    margin-left: 221px;
+    margin-bottom: 60px;
+    height: 50px;
+    width: 325px;
+    border: 2px solid black;
+    background: #cfe2f3;
+    font-size: 18px;
+}
