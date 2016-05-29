@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Homework13-14</title>
+	<link rel="stylesheet" href="css/style.css">
+	<script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.2.0/lodash.js"></script>
+	<script src="js/dist/QBase.js"></script>
+	<script src="js/dist/script.js"></script>
+</head>
+<body>	
+	<script type="text/html" id="test">
+		<form class = "test__block">
+			<% for(var i=0;i< QBase.question.length; i++) { %>
+			<ol class="test">
+				<h4><%-QBase.question[i].q %></h4>
+				<% for(var j=0;j< QBase.question[i].answer.length; j++) { %>
+					<li>
+						<label>
+							<input type="checkbox" class="<%-'check'+i%>" id="<%-'chBox_'+i+'_'+j%>">
+							<%-QBase.question[i].answer[j].text %>
+						</label>
+					</li>
+				<% } %>
+			</ol>
+			<% }; %>
+			<input type="button" value="Проверь меня">
+			<div id="modal_form">
+				<span id="modal_close">X</span> 
+				<p></p>
+			</div>
+			<div id="overlay"></div>
+		</form>
+	</script>	
+</body>	
+
