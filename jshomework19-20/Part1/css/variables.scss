@@ -1,0 +1,32 @@
+$logo: 		      url(../../img/logo.png);
+$links: 		      url(../../img/links.png);
+$search:	      url(../../img/search.png);
+$infoLogos: 	      url(../../img/info__logos.png);
+$arrow:		      url(../../img/arrow.png);
+$font: 		      sans-serif;
+$menuBorder:      1px solid #181a1d;
+$spriteTran:      0.7s;
+$fontSize:	      13px;
+$itemImg1: 	      url(../../img/item_img1.jpg);
+$itemImg2: 	      url(../../img/item_img2.jpg);
+$itemImg3: 	      url(../../img/item_img3.jpg);
+$itemImg4: 	      url(../../img/item_img4.jpg);
+$newsBlockImg1: url(../../img/image--first.png);
+$newsBlockImg2: url(../../img/image--second.png);
+$hover:		      url(../../img/hover.png);
+$opacity:	      0.9;
+$colorNewsBl:    #9d9d9d;
+$sizeNewsBl:      13px;
+$hoverColor:      #248cec;
+$border:	      1px solid #e8e8e8;
+$logoLinks:	      url(../../img/logo__link.png);
+$asideColor:      #797a7c;
+$asideBorder:    1px solid #393c40;
+$footerLogo:      url(../../img/footer__logo.png);
+
+@mixin sprite($width, $height, $backImg, $backPos){
+	width: $width;
+	height: $height;
+	background-image: $backImg;
+	background-position: $backPos;
+}

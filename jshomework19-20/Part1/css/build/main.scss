@@ -1,0 +1,543 @@
+$logo: 		      url(../../img/logo.png);
+$links: 		      url(../../img/links.png);
+$search:	      url(../../img/search.png);
+$infoLogos: 	      url(../../img/info__logos.png);
+$arrow:		      url(../../img/arrow.png);
+$font: 		      sans-serif;
+$menuBorder:      1px solid #181a1d;
+$spriteTran:      0.7s;
+$fontSize:	      13px;
+$itemImg1: 	      url(../../img/item_img1.jpg);
+$itemImg2: 	      url(../../img/item_img2.jpg);
+$itemImg3: 	      url(../../img/item_img3.jpg);
+$itemImg4: 	      url(../../img/item_img4.jpg);
+$newsBlockImg1: url(../../img/image--first.png);
+$newsBlockImg2: url(../../img/image--second.png);
+$hover:		      url(../../img/hover.png);
+$opacity:	      0.9;
+$colorNewsBl:    #9d9d9d;
+$sizeNewsBl:      13px;
+$hoverColor:      #248cec;
+$border:	      1px solid #e8e8e8;
+$logoLinks:	      url(../../img/logo__link.png);
+$asideColor:      #797a7c;
+$asideBorder:    1px solid #393c40;
+$footerLogo:      url(../../img/footer__logo.png);
+
+@mixin sprite($width, $height, $backImg, $backPos){
+	width: $width;
+	height: $height;
+	background-image: $backImg;
+	background-position: $backPos;
+}
+* {
+	margin: 0;
+	padding: 0;
+	font-family: $font;
+}
+li {
+	list-style: none;
+}
+a {
+	text-decoration: none;
+}
+.background__block {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	.background__item {
+		background: #2a2d32;
+		height: 500px;
+		width: 100%;
+		position: absolute;
+		top: 1031px;
+	}
+	.background__elem {
+		background: #f7f7f7;
+		height: 542px;
+		width: 100%;
+		position: absolute;
+		top: 1531px;
+	}
+	.background__sidebar {
+		background: #2a2d32;
+		height: 325px;
+		width: 100%;
+		position: absolute;
+		top: 2342px;
+	}
+	.background__footer {
+		background: #35383c;
+		height: 60px;
+		width: 100%;
+		position: absolute;
+		top: 2667px;
+	}
+}
+.content__block {
+	position: absolute;
+	width: 1160px;
+	left: 50%;
+	margin-left: -580px;
+}
+
+/* HEADER */
+
+header {
+	height: 80px;
+	margin-top: 35px;
+}
+.logo__block {
+	background: $logo 0 0 no-repeat;
+	width: 205px;
+	height: 37px;
+	margin-left: 5px;
+}
+.links__block {
+	position: absolute;
+	right: 10px;
+	top: 45px;
+	width: 150px;
+	a {
+		display: inline-block;
+		@include sprite(16px,16px,$links, 0 0);
+		padding-left: 10px;
+	}
+	a:hover {
+		transition: $spriteTran;
+		@include sprite(16px,16px,$links, 0 -21px);
+	}
+	a + * {
+		@include sprite(16px,16px,$links, -30px 0);
+	}
+	a + *:hover {
+		transition: $spriteTran;
+		@include sprite(16px,16px,$links, -30px -21px);
+	}
+	a + * + * {
+		@include sprite(16px,16px,$links, -63px 0);
+	}
+	a + * + *:hover {
+		transition: $spriteTran;
+		@include sprite(16px,16px,$links, -63px -21px);
+	}
+	a + * + * + *{
+		@include sprite(16px,16px,$links, -96px 0);
+	}
+	a + * + * + *:hover {
+		transition: $spriteTran;
+		@include sprite(16px,16px,$links, -96px -21px);
+	}
+	a + * + * + * + *{
+		@include sprite(6px,16px,$links, -129px 0);
+	}
+	a + * + * + * + *:hover {
+		transition: $spriteTran;
+		@include sprite(6px,16px,$links, -129px -21px);
+	}
+}
+
+/* NAV */
+
+.nav {
+	height: 56px;
+	background: #2a2d32;
+}
+.menu__block {
+	
+	.menu__item {
+		display: inline-block;
+		color: white;
+		text-transform: uppercase;
+		font-size: 14px;
+		padding: 20px 35px;
+		border-right: $menuBorder;
+	}
+	.menu__item:first-child {
+		background: #248cec;
+	}
+	.menu__item:hover {
+		color: #f4b60d;
+	}
+}
+.form__block {
+	position: absolute;
+	right: 5px;
+	top: 125px;
+	.form__item{
+		width: 238px;
+		padding: 10px 15px;
+		color: #626466;
+		border: $menuBorder;	
+		background: #35383c;
+	}
+	a {
+		background: $search;
+		width: 14px;
+		height: 14px;
+		position: absolute;
+		right: 12px;
+		top: 12px;
+	}
+}
+
+/*CAROUSEL*/
+
+.jcarousel__block {
+	position: relative;
+	width: 1160px;
+	height: 470px;
+	margin-top: 40px;
+}
+.jcarousel {
+	position: relative;
+	overflow: hidden;
+	.jcarousel__elem {
+		width: 20000em;
+		position: relative;
+		.jcarosel__item {
+			float: left;
+		}
+	}
+}
+.jcarousel-pagination {
+	position: absolute;
+	bottom: 10px;
+	left: 530px;
+	.number {
+		display: inline-block;
+		width: 15px;
+		height: 15px;
+		background: white;
+		margin-left: 15px;
+		color: white;
+	}
+	.active {
+		padding: 3px 0 0 3px;
+		width: 12px;
+		height: 12px;
+		.active__block {
+			width: 9px;
+			height: 9px;
+			background: black;
+		}			
+	}
+}
+
+/*INFO*/
+
+.info__block {
+	margin-top: 75px;
+	height: 190px;
+	.info__item {
+		width: 370px;
+		display: inline-block;
+		position: relative;
+		margin-left: 12px;
+		.info__number {
+			font-size: 90px;
+			color: #efeff0;
+		}
+		.info__position {
+			position: absolute;
+			right: 10px;
+			top: 10px;
+			.info__logo {
+				@include sprite(32px,32px,$infoLogos, 0 0);
+			}
+			.second {
+				@include sprite(32px,32px,$infoLogos, 32px 0);
+			}
+			.third {
+				@include sprite(32px,32px,$infoLogos, 72px 0);
+			}
+			.info__topic {
+				margin: 15px 0;
+			}
+			.info__text {
+				width: 235px;
+				font-size: $fontSize;
+				margin-bottom: 15px;
+			}
+			.info__link {
+				font-size: $fontSize;
+				font-weight: bold;
+				color: black;
+				.link__arrow{
+					background: $arrow 0 0 no-repeat;
+					width: 10px;
+					height: 10px;
+					position: absolute;
+					right: 150px;
+					bottom: 4px;
+				}
+			}
+			.info__link:hover {
+				color: blue;
+				.link__arrow{
+					transition: $spriteTran;
+					background: $arrow -15px 0 no-repeat;
+				}
+			}
+		}	
+	}
+}
+
+/*SERVICE*/
+
+.service__block {
+	margin-top: 130px;
+	.service__text {
+		color: white;
+	}
+	.service__images {
+		position: relative;
+		margin-top: 54px;
+		.service__item {
+			display: inline-block;
+			margin-right: 35px;
+			.item__img{
+				width: 260px;
+				height: 260px;
+				margin-bottom: 32px;				
+			}
+			.img1 {
+				@include sprite(260px,260px,$itemImg1, -175px 0);
+			}
+			.img2 {
+				@include sprite(260px,260px,$itemImg2, -108px 0);
+			}
+			.img3 {
+				@include sprite(260px,260px,$itemImg3, -15px 0);
+			}
+			.img4 {
+				@include sprite(260px,260px,$itemImg4, -53px 0);
+			}
+			.item__front {
+				@extend .item__img;
+				position: absolute;
+				top: 0;
+				display: none;
+				opacity: 0;
+				background: rgba(46,144,234,1) $hover center center no-repeat;				
+			}
+			.item__text {
+				padding-left: 65px;
+				color: white;
+			}
+		}
+		.service__item + * + * + *{
+			margin-right: 0;
+		}
+		.service__item:hover {
+			.item__front {
+				opacity: $opacity;
+				display: block;
+			}
+			.item__text{
+				color: #f4b60d;
+			}
+		}
+	}
+}
+
+/*NEWS BLOCK*/
+
+.news__block {
+	margin-top: 120px;
+	height: 485px;
+	.last__news__block {
+		width: 560px;
+		display: inline-block;
+		position: relative;
+		.last__news__item {
+			position: relative;
+			margin-top: 50px;
+			.last__news__image {
+				width: 168px;
+				height: 152px;
+			}
+			.image--first {
+				@extend .last__news__image;
+				background: $newsBlockImg1 no-repeat;
+			}
+			.image--second {
+				@extend .last__news__image;
+				background: $newsBlockImg2 no-repeat;
+			}
+			.last__news__content {
+				position: absolute;
+				right: 0;
+				top: 5px;
+				width: 360px;
+				.content__text {
+					margin-bottom: 10px;					
+					a {
+						color: black;
+						font-size: 16px;
+					}
+				}
+				.content__links {
+					margin-bottom: 30px;
+					color: $colorNewsBl;
+					font-size: $sizeNewsBl;
+					a {
+						color: $hoverColor;
+					}
+				}
+				.content__text {
+					font-size: $sizeNewsBl;
+					color: $colorNewsBl;
+				}
+				.content__text a:hover {
+					color: $hoverColor;
+				}
+			}
+		}
+	}
+	.banner__block{
+		width: 560px;
+		display: inline-block;
+		position: absolute;
+		.panel__block {
+			margin-top: 50px;
+			.banner__item {
+				margin-bottom: 5px;
+				.banner__link {
+					background: white;
+					.banner__logo {
+						border: $border;
+						display: inline-block;
+						padding: 10px 15px;
+					}
+					.banner__link__text {
+						@extend .banner__logo;
+						text-transform: uppercase;
+						font-size: $fontSize;
+						padding: 11.5px;
+						margin-left: -5px;
+						width: 494px;
+					}
+				}
+				.banner__text {
+					display: none;
+					height: 0;
+					color: $colorNewsBl;
+					font-size: $sizeNewsBl;
+					width: 515px;
+					margin: -25px 0 35px 45px;
+					opacity: 0;
+				}
+			}
+		}
+	}
+}
+
+/*LOGO LINKS*/
+
+.logo__links__block {
+	margin: 100px 0 160px 0;
+	.logo__link {
+		display: inline-block;
+		@include sprite(130px,65px,$logoLinks, 0 0);
+		margin-right: 54px;
+		transition: $spriteTran;
+	}
+	.logo__link:hover {
+		@include sprite(130px,65px,$logoLinks, 0 -65px);
+	}
+	.logo2 {
+		@include sprite(130px,65px,$logoLinks, -180px 0);		
+	}
+	.logo2:hover {
+		@include sprite(130px,65px,$logoLinks, -180px -65px);
+	}
+	.logo3 {
+		@include sprite(160px,65px,$logoLinks, -409px 0);
+	}
+	.logo3:hover {
+		@include sprite(160px,65px,$logoLinks, -409px -65px);
+	}
+	.logo4 {
+		@include sprite(130px,65px,$logoLinks, -630px 0);
+	}
+	.logo4:hover {
+		@include sprite(130px,65px,$logoLinks, -630px -65px);
+	}
+	.logo5 {
+		@include sprite(130px,65px,$logoLinks, -830px 0);
+	}
+	.logo5:hover {
+		@include sprite(130px,65px,$logoLinks, -830px -65px);
+	}
+	.logo6 {
+		@include sprite(130px,65px,$logoLinks, -1000px 0);
+	}
+	.logo6:hover {
+		@include sprite(130px,65px,$logoLinks, -1000px -65px);
+	}
+}
+
+/*SIDEBAR*/
+
+aside {
+	margin-bottom: 80px;
+	.aside__item {
+		display: inline-block;
+		width: 260px;
+		margin-right: 35px;
+		.aside__topic {
+			color: white;
+			text-transform: uppercase;
+			margin-bottom: 45px;
+		}
+		.aside__list{
+			.aside__link {
+				font-size: $fontSize;
+				color: $asideColor;
+				padding: 10px 0;
+				border-bottom: $asideBorder;
+			}
+			.aside__link:hover {
+				color: $hoverColor;
+			}
+		}
+	}
+	.aside__item  + * + * + * {
+		margin-right: 0;
+	}
+}
+
+
+/*FOOTER*/
+
+footer {
+	
+	.footer__item{
+		display: inline-block;
+		margin-right: 35px;
+		.footer__logo {
+			display: inline-block;
+			/* width: 12px;
+			height: 16px;
+			background: $footerLogo 0 0 no-repeat;	 */
+			@include sprite(12px,16px,$footerLogo, 0 0);
+			margin-bottom: -4px;
+			margin-right: 5px;
+		}
+		.flogo2 {
+			@include sprite(12px,16px,$footerLogo, -17px 0);
+		}
+		.flogo3 {
+			@include sprite(14px,16px,$footerLogo, -34px 0);
+		}
+		a {
+			color: $asideColor;
+			font-size: 12px;
+		}
+	}
+	.footer__item:last-child {
+		float: right;
+		margin: 0;
+	}
+}
