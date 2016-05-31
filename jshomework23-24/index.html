@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Homework23-24</title>
+	<link rel="stylesheet" href="css/style.css">
+	<script data-main="js/script" src="js/require.js"></script>
+</head>
+<body>	
+	
+	<script type="text/template" id="wrapper-template">
+		<div class="wrapper">
+			<h6 class="wrapper__topic">To Do List</h6>
+			<div class="controlls">
+				<input type="text" class="item-value">
+				<button class="item-add"></button>
+				<button class="item-remove"></button>
+			</div>
+			<ul class="item-list"></ul>
+		</div>
+	</script>
+	
+	<script type="text/template" id="list-template">
+		<% for(var i = 0;i<data.length;i++) {%>
+				<li class="item-update">
+					<span data-search="<%= data[i] %>" class="list-item"><%= data[i] %></span>
+					<input type="text" class="list-item-update"/>
+					<span data-value="<%= data[i] %>" class="item-delete">x</span>
+				</li>
+		<% }; %>
+	</script>
+</body>
